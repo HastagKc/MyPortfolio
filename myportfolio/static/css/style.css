@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: broder-box;
+
+}
+
+
+body{
+  background-color: #FFFFFF;
+}
+#navigation{
+  height: 80px;
+}
+
+
+
+ul li a {
+  text-decoration: none;
+}
+
+.content-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 80px);
+}
+.content-div .content h1{
+font-size: 58px;
+
+}
+
+.content-div .content p{
+  font-size: 24px;
+  text-align: center;
+}
