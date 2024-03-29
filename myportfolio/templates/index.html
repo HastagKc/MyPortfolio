@@ -21,9 +21,9 @@
     <nav id="navigation">
       <ul class="links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="#about-section">About Me</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#project-section">Projects</a></li>
         <li><a href="#">Contact Me</a></li>
 
         <li>
@@ -41,70 +41,114 @@
       </div>
     </div>
   </header>
-
+  <!-- about section -->
   <section id="about-section">
 
     <h1>About Me</h1>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dicta incidunt et laboriosam officia
-      dignissimos hic quisquam qui nostrum quam ipsum autem ratione obcaecati consequuntur fuga suscipit, quibusdam
-      dolorem ea.</p>
+    <p>
+      "I am a Python developer with a strong interest in both artificial intelligence and Django web development. With a
+      passion for problem-solving and a keen eye for detail, I specialize in crafting elegant solutions that leverage AI
+      technologies to enhance user experiences. Additionally, my expertise in Django allows me to build scalable and
+      efficient web applications with ease. Known for my dedication to mastering new technologies and my ability to
+      thrive in fast-paced environments, I am eager to contribute to projects that merge AI innovation with Django
+      development, creating impactful solutions that drive the future of technology."</p>
 
   </section>
 
 
-  <section id="about-section">
+  <!-- skills section -->
+  <section id="skills-section">
 
-    <h1>About Me</h1>
+    <h1>Skills</h1>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dicta incidunt et laboriosam officia
-      dignissimos hic quisquam qui nostrum quam ipsum autem ratione obcaecati consequuntur fuga suscipit, quibusdam
-      dolorem ea.</p>
+    <h3>Programming Language</h3>
+    <div class="skills-container">
+      <p>HTML</p>
+      <div class="container">
+        <div class="skills html">90%</div>
+      </div>
 
+      <p>CSS</p>
+      <div class="container">
+        <div class="skills css">80%</div>
+      </div>
+
+      <p>JavaScript</p>
+      <div class="container">
+        <div class="skills js">75%</div>
+      </div>
+
+      <p>PHP</p>
+      <div class="container">
+        <div class="skills php">60%</div>
+      </div>
+
+      <p>Futter</p>
+      <div class="container">
+        <div class="skills flutter">75%</div>
+      </div>
+
+      <p>Django</p>
+      <div class="container">
+        <div class="skills Django">85%</div>
+      </div>
+
+    </div>
+    <!-- tools -->
+    <h3>Tools</h3>
+
+    <div class="tools-container">
+      <!-- git -->
+      <div class="card">
+        <img src="{%static 'img/icons/git.png'%}" alt="github_icon" style="width:100%">
+        <div class="card-title-container">
+          <h4><b>git</b></h4>
+        </div>
+      </div>
+      <!-- vs-code -->
+      <div class="card">
+        <img src="{%static 'img/icons/vs-code.png'%}" alt="github_icon" style="width:100%">
+        <div class="card-title-container">
+          <h4><b>Vs-Code</b></h4>
+        </div>
+      </div>
+      <!-- postman -->
+      <div class="card">
+        <img src="{%static 'img/icons/postman.png'%}" alt="github_icon" style="width:100%">
+        <div class="card-title-container">
+          <h4><b>Postman</b></h4>
+        </div>
+      </div>
+      <!-- canvas -->
+      <div class="card">
+        <img src="{%static 'img/icons/canvas.png'%}" alt="github_icon" style="width:100%">
+        <div class="card-title-container">
+          <h4><b>Canvas</b></h4>
+        </div>
+      </div>
+      <!-- android-studio -->
+      <div class="card">
+        <img src="{%static 'img/icons/android-studio.png'%}" alt="github_icon" style="width:100%">
+        <div class="card-title-container">
+          <h4><b>Android Studio</b></h4>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="about-section">
-
-    <h1>About Me</h1>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dicta incidunt et laboriosam officia
-      dignissimos hic quisquam qui nostrum quam ipsum autem ratione obcaecati consequuntur fuga suscipit, quibusdam
-      dolorem ea.</p>
-
-  </section>
-
-  <section id="about-section">
-
-    <h1>About Me</h1>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dicta incidunt et laboriosam officia
-      dignissimos hic quisquam qui nostrum quam ipsum autem ratione obcaecati consequuntur fuga suscipit, quibusdam
-      dolorem ea.</p>
-
-  </section>
-
-  <section id="about-section">
-
-    <h1>About Me</h1>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dicta incidunt et laboriosam officia
-      dignissimos hic quisquam qui nostrum quam ipsum autem ratione obcaecati consequuntur fuga suscipit, quibusdam
-      dolorem ea.</p>
-
-  </section>
-  <section id="about-section">
-
-    <h1>About Me</h1>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dicta incidunt et laboriosam officia
-      dignissimos hic quisquam qui nostrum quam ipsum autem ratione obcaecati consequuntur fuga suscipit, quibusdam
-      dolorem ea.</p>
-
+  <!-- porject section -->
+  <section id="project-section">
+    <h1>Projects</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci obcaecati magni. Consequuntur, modi!
+    Animi perspiciatis consequuntur quod quaerat eveniet voluptate quasi iure autem ducimus numquam corrupti accusamus,
+    nisi saepe?
   </section>
 
 
+  <!-- floating action button -->
   <button class="floating-button" id="back-to-top">
-    <img src="{% static 'img/up_arrow.png' %}" alt="Button Image">
+    <img src="{% static 'img/icons/up_arrow.png' %}" alt="Button Image">
   </button>
 
 

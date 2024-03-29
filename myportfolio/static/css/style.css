@@ -1,19 +1,23 @@
-
 :root {
-  --primary-color:#fffff;
-  --button-color: #685A84;
+  --primary-color: #fff;
+  --secondary-color: rgb(116, 110, 110);
+  --button-color: #685a84;
+  --floating-btn-color: #fff;
+  --heading-one: 62px;
+  --heading-two: 24px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-
-body{
+body {
   background-color: var(--primary-color);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -22,13 +26,13 @@ body{
   width: 100vh;
   overflow-x: hidden;
 }
-#home{
+#home {
   width: 100vw;
-  height:100vh;
+  height: 100vh;
 }
 
-#navigation{
-  height:10vh;
+#navigation {
+  height: 10vh;
   /* background-color: blue; */
 }
 
@@ -37,11 +41,10 @@ body{
   display: flex;
   align-items: center;
 }
-#navigation .links li{
+#navigation .links li {
   margin-left: 10px;
   margin-top: 20px;
 }
-
 
 #navigation .links li a {
   text-decoration: none;
@@ -49,36 +52,133 @@ body{
   padding: 10px;
 }
 
-#navigation  .links button{
+#navigation .links button {
   padding: 10px;
   border-radius: 5px;
   border: none;
- background-color: var(--button-color);
+  background-color: var(--button-color);
 }
-.content-div{
+.content-div {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height:calc(100vh - 10vh);
-}
-.content-div .content h1{
-font-size: 52px;
-
+  height: calc(100vh - 10vh);
 }
 
-.content-div .content p{
+h1 {
+  font-size: var(--heading-one);
+}
+h3 {
+  font-size: var(--heading-two);
+}
+section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.content-div .content p {
   font-size: 24px;
   text-align: center;
 }
 
-
 /* about me section  */
 #about-section {
- min-width: 100vw ;
-  min-height:100vh ;
-  background-color: red;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+#about-section p {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  right: 10%;
+  /* transform: translate(-50%,-50%); */
+  font-size: 18px;
+  text-align: justify;
+}
+
+/* skills section */
+#skills-section {
+  background-color: var(--primary-color);
+}
+
+#skills-section .skills-container {
+  width: 100vw;
+  min-height: 200px;
   padding: 20px;
+  /* background-color: red; */
+}
+
+#skills-section .skills-container.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.html {
+  width: 90%;
+  background-color: #04aa6d;
+}
+.css {
+  width: 80%;
+  background-color: #2196f3;
+}
+.js {
+  width: 75%;
+  background-color: #f44336;
+}
+.php {
+  width: 60%;
+  background-color: #808080;
+}
+.flutter {
+  width: 75%;
+  background-color: #685a84;
+}
+
+.Django {
+  width: 85%;
+  background-color: #f44336;
+}
+
+.tools-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  margin-left: 10px;
+  transition: 0.3s;
+  width: 220px;
+  transition: all 0.5s linear;
+  /* background-color: rebeccapurple; */
+  padding: 20px;
+  /* box-shadow: 0 8px 16px 0 rgba(212, 184, 184, 0.425); */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(2, 2, 2, 0.2);
+}
+
+.card-title-container {
+  text-align: center;
+  padding: 2px 16px;
+}
+
+/* project section  */
+#project-section {
+  background-color: var(--secondary-color);
 }
 
 /* floating button */
@@ -88,24 +188,24 @@ font-size: 52px;
   height: 40px;
   width: 40px;
   position: fixed;
-  bottom: 20px; 
-  right: 20px; 
-  background-color: white;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--floating-btn-color);
   border: none;
   border-radius: 50%;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 /* Hover effect for the button */
 .floating-button:hover {
-  background-color: rgba(32, 65, 32, 0.493); 
+  background-color: rgba(32, 65, 32, 0.493);
 }
-button img{
+.floating-button img {
   width: 40px;
   height: 40px;
   padding: 10px;
