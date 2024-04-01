@@ -112,6 +112,7 @@ p {
 #about-section {
   background-color: grey;
   position: relative;
+  min-height: 100vh;
 }
 
 #about-section h1 {
@@ -142,78 +143,110 @@ h3 {
   font-size: 3.2rem;
 }
 
-#skills-section .skills-container {
-  padding: 20px;
-}
-
-#skills-section .skills-container.container {
-  width: 100%;
-  background-color: #ddd;
-}
-
-.skills {
-  text-align: right;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  outline: none;
-}
-
-.html {
-  width: 90%;
-  background-color: #04aa6d;
-}
-
-.css {
-  width: 80%;
-  background-color: #2196f3;
-}
-.js {
-  width: 75%;
-  background-color: #f44336;
-}
-.php {
-  width: 60%;
-  background-color: #808080;
-}
-.flutter {
-  width: 75%;
-  background-color: #685a84;
-}
-
-.Django {
-  width: 85%;
-  background-color: #f44336;
-}
-
-/* tools */
-
-.tools-container {
-  margin-top: 10px;
+.skills-container {
   display: flex;
-  justify-content: center;
-}
-.card {
-  margin-left: 10px;
-  transition: 0.3s;
-  width: 220px;
-  transition: all 0.5s linear;
+  flex-wrap: wrap;
+  padding: 60px;
   /* background-color: rebeccapurple; */
+}
+
+.card {
+  width: calc(16.66% - 60px);
+  flex-grow: 1;
+  margin: 10px;
   padding: 20px;
-  /* box-shadow: 0 8px 16px 0 rgba(212, 184, 184, 0.425); */
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(2, 2, 2, 0.2);
 }
 
+.card img {
+  height: 75%;
+  width: auto;
+}
+
 .card-title-container {
   text-align: center;
   padding: 2px 16px;
+  height: 20%;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
+/* responsive cards */
+
+@media (max-width: 1200px) {
+  #about-section p {
+    top: 20%;
+    left: 10%;
+    font-size: 2.4rem;
+  }
+  .skills-container {
+    padding: 30px;
+    /* background-color: rebeccapurple; */
+  }
+
+  .card {
+    width: calc(25% - 60px);
+  }
+  .card-title-container {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 890px) {
+  #about-section p {
+    top: 30%;
+    left: 10%;
+    font-size: 8rem;
+  }
+
+  .card {
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  #about-section p {
+    top: 12%;
+    left: 10%;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #about-section p {
+    top: 20%;
+    left: 10%;
+    font-size: 1.6rem;
+  }
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  #about-section {
+    padding: 10px 0px;
+  }
+  #about-section p {
+    top: 10%;
+    left: 5%;
+    font-size: 1.4rem;
+  }
+  .skills-container {
+    padding: 10px;
+  }
+  .card {
+    flex-basis: calc(100%);
+  }
+}
 /* floating button */
 
 /* Styles for the floating button */
