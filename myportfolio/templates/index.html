@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
 
@@ -65,133 +69,24 @@
     <!-- skills section -->
     <section id="skills-section">
       <h1>Skills</h1>
+
       <div class="skills-container">
-        <!-- html and css -->
+        <!-- card Start -->
+        {%for card in cards%}
         <div class="card">
           <img
-            src="{%static 'img/icons/htmlcss.png'%}"
+            src="{{card.card_image.url }}"
             alt="github_icon"
             style="width: 100%"
           />
           <div class="card-title-container">
-            <h4>Html And Css</h4>
-          </div>
-        </div>
-        <!-- js -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/js.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Js</h4>
+            <h4>{{card.card_title}}</h4>
           </div>
         </div>
 
-        <!-- boostrap -->
+        {%endfor%}
 
-        <div class="card">
-          <img
-            src="{%static 'img/icons/boostrap.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Boostrap</h4>
-          </div>
-        </div>
-
-        <!-- sql -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/sql.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Sql</h4>
-          </div>
-        </div>
-
-        <!-- dart -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/dart.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Dart</h4>
-          </div>
-        </div>
-
-        <!-- flutter -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/flutter.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Flutter</h4>
-          </div>
-        </div>
-        <!-- git -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/git.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Git</h4>
-          </div>
-        </div>
-        <!-- vs-code -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/vs-code.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>VsCode</h4>
-          </div>
-        </div>
-        <!-- postman -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/postman.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Postman</h4>
-          </div>
-        </div>
-        <!-- canvas -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/canvas.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Canvas</h4>
-          </div>
-        </div>
-        <!-- android-studio -->
-        <div class="card">
-          <img
-            src="{%static 'img/icons/android-studio.png'%}"
-            alt="github_icon"
-            style="width: 100%"
-          />
-          <div class="card-title-container">
-            <h4>Android Studio</h4>
-          </div>
-        </div>
+        <!-- card end -->
       </div>
     </section>
     <section id="projects-section">
@@ -206,6 +101,50 @@
         fuga eum.
       </p>
     </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Important Links</h4>
+            <ul>
+              <li><a href="#heading-section">Home</a></li>
+              <li><a href="#about-section">About Me</a></li>
+              <li><a href="#skills-section">Skills</a></li>
+              <li><a href="#projects-section">Project</a></li>
+              <li><a href="#contact-section">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Important Project</h4>
+            <ul>
+              <li><a href="#">Credit Card Frud Detection</a></li>
+              <li><a href="#">Movie App (Flutter)</a></li>
+              <li><a href="#">Todo (Django)</a></li>
+              <li><a href="#">Portfolio (Django)</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Me</h4>
+            <div class="social-links">
+              <a href="#"
+                ><img src="{%static 'img/icons/github.png'%}" alt="github"
+              /></a>
+              <a href="#"
+                ><img src="{%static 'img/icons/linkedin.png'%}" alt="github"
+              /></a>
+              <a href="#"
+                ><img
+                  src="{%static 'img/icons/instagram.png'%}"
+                  alt="instagram"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- floating action button -->
     <button class="floating-button" id="back-to-top">

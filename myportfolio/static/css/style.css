@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
@@ -172,10 +172,106 @@ h3 {
 
 .card-title-container {
   text-align: center;
-  padding: 2px 16px;
   height: 20%;
+  margin-top: 10px;
   font-weight: bold;
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+/* footer section */
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer-col .social-links a img {
+  width: 100%;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
 }
 
 /* responsive cards */
@@ -200,12 +296,9 @@ h3 {
 }
 
 @media (max-width: 890px) {
-  #about-section p {
-    top: 30%;
-    left: 10%;
-    font-size: 8rem;
+  h1 {
+    font-size: 4.2rem;
   }
-
   .card {
     flex-basis: calc(33.33% - 20px);
   }
@@ -218,33 +311,26 @@ h3 {
 }
 
 @media (max-width: 450px) {
-  #about-section p {
-    top: 20%;
-    left: 10%;
-    font-size: 1.6rem;
-  }
-  .card {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 350px) {
   h1 {
-    font-size: 1.2rem;
+    font-size: 4rem;
   }
+
   #about-section {
     padding: 10px 0px;
   }
   #about-section p {
     top: 10%;
     left: 5%;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .skills-container {
     padding: 10px;
   }
   .card {
     flex-basis: calc(100%);
+  }
+  .card-title-container {
+    font-size: 1.8rem;
   }
 }
 /* floating button */
