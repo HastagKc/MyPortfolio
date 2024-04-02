@@ -7,5 +7,4 @@ from .models import Card
 def home(request):
     card = Card.objects.all()
     content = {"cards": card}
-
     return render(request, "index.html", context=content)
