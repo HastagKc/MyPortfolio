@@ -182,6 +182,30 @@ h3 {
   font-weight: 900;
 }
 
+/* project section start  */
+#projects-section {
+  background-color: red;
+}
+
+.project-container {
+  margin: 20px;
+  border: 2px solid rebeccapurple;
+  min-height: 80vh;
+  /* display: flex; */
+}
+
+.project-container .row {
+  width: 100%;
+  height: 500px;
+  background-color: green;
+}
+
+.project-container .row .project-image {
+  width: 50%;
+  height: 100%;
+}
+/* project section end  */
+
 /* footer section */
 
 .container {
