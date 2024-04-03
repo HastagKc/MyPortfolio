@@ -184,8 +184,6 @@ h3 {
 
 /* project section start  */
 #project-section {
-  /* width: 100%;
-  height: 100vh; */
   background-color: grey;
   padding: 20px;
 }
@@ -195,12 +193,20 @@ h3 {
 }
 
 #project-section .project-container {
-  width: 40%;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.project-row {
+  flex-basis: calc(33.33% - 20px);
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  margin: 10px;
+  height: auto;
 }
-
 .project-image {
   width: 100%;
   height: 100%;
@@ -208,7 +214,7 @@ h3 {
   transition: scale 0.5s ease-in-out;
 }
 
-.project-container:hover .project-image {
+.project-row:hover .project-image {
   scale: 1.2;
 }
 
@@ -217,12 +223,12 @@ h3 {
   height: 0%;
   background-color: black;
   position: absolute;
-  bottom: -5;
+  bottom: 0;
   left: 0;
   right: 0;
   padding: 20px;
-  margin: 5px 0px 0px 0px;
-  transition: all 0.7s ease-in-out;
+  visibility: hidden;
+  transition: all 0.7s linear;
 }
 .project-title,
 .project-subtitle,
@@ -232,7 +238,7 @@ h3 {
 }
 
 .project-title {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: red;
 }
 
@@ -241,12 +247,12 @@ h3 {
 }
 
 .project-description {
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
-#project-section .project-container:hover .overlay-div {
-  height: 60%;
-  bottom: 0;
+#project-section .project-row:hover .overlay-div {
+  height: 70%;
+  visibility: visible;
 }
 
 /* project section end  */
@@ -330,78 +336,6 @@ ul {
   width: 100%;
 }
 
-/*responsive*/
-@media (max-width: 767px) {
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
-  }
-}
-
-/* responsive cards */
-
-@media (max-width: 1200px) {
-  #about-section p {
-    top: 20%;
-    left: 10%;
-    font-size: 2.4rem;
-  }
-  .skills-container {
-    padding: 30px;
-    /* background-color: rebeccapurple; */
-  }
-
-  .card {
-    width: calc(25% - 60px);
-  }
-  .card-title-container {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 890px) {
-  h1 {
-    font-size: 4.2rem;
-  }
-  .card {
-    flex-basis: calc(33.33% - 20px);
-  }
-
-  #about-section p {
-    top: 12%;
-    left: 10%;
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 450px) {
-  h1 {
-    font-size: 4rem;
-  }
-
-  #about-section {
-    padding: 10px 0px;
-  }
-  #about-section p {
-    top: 10%;
-    left: 5%;
-    font-size: 1.6rem;
-  }
-  .skills-container {
-    padding: 10px;
-  }
-  .card {
-    flex-basis: calc(100%);
-  }
-  .card-title-container {
-    font-size: 1.8rem;
-  }
-}
 /* floating button */
 
 /* Styles for the floating button */
@@ -432,7 +366,45 @@ ul {
   padding: 10px;
 }
 
-/* responsive design */
+/* responsive 1200 */
+
+@media (max-width: 1200px) {
+  #about-section p {
+    top: 20%;
+    left: 10%;
+    font-size: 2.4rem;
+  }
+  .skills-container {
+    padding: 30px;
+    /* background-color: rebeccapurple; */
+  }
+
+  .card {
+    width: calc(25% - 60px);
+  }
+  .card-title-container {
+    font-size: 1.6rem;
+  }
+}
+
+/* responsive design  890 */
+
+@media (max-width: 890px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+  .card {
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  #about-section p {
+    top: 12%;
+    left: 10%;
+    font-size: 1.8rem;
+  }
+}
+
+/* responsive design  768 */
 
 @media (max-width: 768px) {
   /* responsive navigation */
@@ -483,5 +455,71 @@ ul {
 
   p {
     font-size: 1.6rem;
+  }
+
+  /* project section  */
+
+  .project-row {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+/* responsive 574px */
+@media (max-width: 574px) {
+  /* project section */
+
+  .project-row {
+    flex-basis: calc(100%);
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+    color: red;
+  }
+
+  .project-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  /* footer section  */
+  .footer-col {
+    width: 100%;
+  }
+}
+
+/* responsive design  450 */
+@media (max-width: 450px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  #about-section {
+    padding: 10px 0px;
+  }
+  #about-section p {
+    top: 10%;
+    left: 5%;
+    font-size: 1.6rem;
+  }
+  .skills-container {
+    padding: 10px;
+  }
+  .card {
+    flex-basis: calc(100%);
+  }
+  .card-title-container {
+    font-size: 1.8rem;
   }
 }
