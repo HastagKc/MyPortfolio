@@ -257,6 +257,141 @@ h3 {
 
 /* project section end  */
 
+/* contact Section  start */
+.contact-heading {
+  font-size: 62px;
+  margin-left: 20px;
+}
+
+.contact-div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+  padding: 20px;
+  box-shadow: 5px 5px 15px 5px rgba(77, 70, 70, 0.123);
+}
+
+.left-div {
+  flex-basis: calc(50% - 20px);
+  /* background-color: blueviolet; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-div .contact-sub-heading {
+  font-size: 4.2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.left-div .contact-sub-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  height: 2px;
+  background-color: transparent;
+  background-color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.left-div .contact-des {
+  font-size: 2.6rem;
+}
+.mail-address .mail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* background-color: blue; */
+}
+.mail-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.mail {
+  font-size: 1.8rem;
+}
+
+.contact-icon-div {
+  display: flex;
+}
+
+.icon-img {
+  margin-right: 30px;
+}
+.right-div {
+  flex-basis: calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-around;
+  /* background-color: green; */
+}
+
+.right-div-heading {
+  font-size: 2rem;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="text"]:focus {
+  outline: #1111;
+}
+
+/* Style the placeholder text */
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+textarea {
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+textarea:focus {
+  border-color: #1111;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea::placeholder {
+  color: #999;
+}
+
+/* contact Section end */
+
 /* footer section */
 
 .container {
@@ -402,6 +537,20 @@ ul {
     left: 10%;
     font-size: 1.8rem;
   }
+
+  /* contact section */
+  .left-div .contact-des {
+    font-size: 1.6rem;
+  }
+
+  /* contact section */
+  .left-div {
+    flex-basis: calc(100% - 20px);
+  }
+
+  .right-div {
+    flex-basis: calc(100% - 20px);
+  }
 }
 
 /* responsive design  768 */
@@ -496,6 +645,71 @@ ul {
   /* footer section  */
   .footer-col {
     width: 100%;
+  }
+}
+/* responsive desing 490 px */
+
+@media (max-width: 490px) {
+  #contact-section {
+    padding: 20px;
+  }
+
+  #contact-section .contact-heading {
+    font-size: 2.2rem;
+  }
+
+  .contact-div {
+    /* background-color: red; */
+    margin: 0;
+    padding: 20px;
+  }
+  .left-div {
+    flex-basis: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: start;
+    /* background-color: #0056b3; */
+    height: auto;
+  }
+  .left-div .contact-sub-heading {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+  }
+
+  .left-div .contact-des {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .mail-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-icon-div {
+    width: 40px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .icon-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 50px;
+  }
+
+  .mail-address {
+    margin-bottom: 20px;
+  }
+  .mail {
+    font-size: 1.4rem;
+  }
+
+  .right-div {
+    flex-basis: 100%;
+    margin-top: 20px;
+    padding: 0;
   }
 }
 
