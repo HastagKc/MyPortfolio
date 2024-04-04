@@ -2,6 +2,7 @@ from django.db import models
 
 
 # Create your models here.
+# skills card
 class Card(models.Model):
     card_title = models.CharField(max_length=50)
     card_image = models.FileField(

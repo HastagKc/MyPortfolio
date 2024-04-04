@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from .models import Card
 
 
@@ -8,4 +7,4 @@ class CardAdmin(admin.ModelAdmin):
     list_display = ("card_title", "card_image")
 
 
-admin.site.register(Card)
+admin.site.register(Card, CardAdmin)
